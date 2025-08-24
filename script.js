@@ -13,8 +13,8 @@ let esperaNovoNum = false;
 
 //Um cost cria uma constante que não pode ser alterado
 //Nesse caso fez um chamado ao elemento pelo ID ao html
-const atualDisplay = document.getElementById('current-display');
-const anteriorDisplay = document.getElementByIde('previous-display'); // Mostra a aritimética anterior
+const atualDisplay = document.getElementById('atual-display');
+const anteriorDisplay = document.getElementByIde('anterior-display'); // Mostra a aritimética anterior
 
 //===========Função para atualizar o display ============
 
@@ -94,7 +94,7 @@ function inputOperator(nextOperator) {
 		const result = performCalculation(); //Calcula o resultado da operaçãop anterior
 		if (result === null) return:{
 			atualInput = String(result);
-			anteriorInput = currentInput;
+			anteriorInput = atualInput;
 		}
 	}
 	esperaNovoNum = true;
